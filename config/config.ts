@@ -110,76 +110,17 @@ export default {
           Routes: ['src/pages/Authorized'],
           authority: ['admin', 'user'],
           routes: [
-            // {
-            //   path: '/dashboard',
-            //   name: 'dashboard',
-            //   icon: 'dashboard',
-            //   routes: [],
-            // },
             {
-              path: '/form',
-              icon: 'form',
-              name: 'form',
+              path: '/operate',
+              icon: 'appstore',
+              name: 'operate',
               routes: [
                 {
-                  name: 'basic-form',
-                  path: '/form/basic-form',
+                  name: 'dot',
+                  icon: 'book',
+                  path: '/operate/dot',
+                  // redirect: '/operate/dot',
                   component: './form/basic-form',
-                },
-              ],
-            },
-            // {
-            //   path: '/list',
-            //   icon: 'table',
-            //   name: 'list',
-            //   routes: [
-            //     {
-            //       path: '/list/search',
-            //       name: 'search-list',
-            //       component: './list/search',
-            //       routes: [
-            //         {
-            //           path: '/list/search',
-            //           redirect: '/list/search/articles',
-            //         },
-            //         {
-            //           name: 'articles',
-            //           path: '/list/search/articles',
-            //           component: './list/search/articles',
-            //         },
-            //         {
-            //           name: 'projects',
-            //           path: '/list/search/projects',
-            //           component: './list/search/projects',
-            //         },
-            //       ],
-            //     },
-            //     {
-            //       name: 'table-list',
-            //       path: '/list/table-list',
-            //       component: './list/table-list',
-            //     },
-            //     {
-            //       name: 'card-list',
-            //       path: '/list/card-list',
-            //       component: './list/card-list',
-            //     },
-            //   ],
-            // },
-            {
-              path: '/profile',
-              name: 'profile',
-              icon: 'profile',
-              routes: [
-                {
-                  name: 'basic',
-                  path: '/profile/basic',
-                  component: './profile/basic',
-                },
-                {
-                  name: 'advanced',
-                  path: '/profile/advanced',
-                  component: './profile/advanced',
                 },
               ],
             },
