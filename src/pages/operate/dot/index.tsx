@@ -20,17 +20,16 @@ import React, { Component, Fragment } from 'react';
 
 import { Dispatch } from 'redux';
 import { FormComponentProps } from 'antd/es/form';
-import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import { SorterResult } from 'antd/es/table';
 import { connect } from 'dva';
 import moment from 'moment';
-// import { StateType } from './model';
-// import CreateForm from './components/CreateForm';
-// import StandardTable, { StandardTableColumnProps } from './components/StandardTable';
-// import UpdateForm, { FormValsType } from './components/UpdateForm';
-// import { TableListItem, TableListPagination, TableListParams } from './data.d';
+import { StateType } from './model';
+import CreateForm from './CreateForm';
+import UpdateForm, { FormValsType } from './UpdateForm';
+import { TableListItem, TableListPagination, TableListParams } from './data.d';
 
 import styles from './style.less';
+import tableList from '@/pages/table-list';
 
 const FormItem = Form.Item;
 const { Option } = Select;
@@ -85,7 +84,7 @@ class TableList extends Component<TableListProps, TableListState> {
     stepFormValues: {},
   };
 
-  columns: StandardTableColumnProps[] = [
+  columns = [
     {
       title: '规则名称',
       dataIndex: 'name',
@@ -352,10 +351,10 @@ class TableList extends Component<TableListProps, TableListState> {
 
   render() {
     const {
-      // tableList: { data },
+      tableList: { data },
       loading,
     } = this.props;
-
+    console.log('tableList', this.props)
     const { selectedRows, modalVisible, updateModalVisible, stepFormValues } = this.state;
     const menu = (
       <Menu onClick={this.handleMenuClick} selectedKeys={[]}>
@@ -402,20 +401,20 @@ class TableList extends Component<TableListProps, TableListState> {
             loading={loading}
             size="middle"
             bordered
-            // data={data}
+            dataSource={data.list}
             columns={this.columns}
             // onSelectRow={this.handleSelectRows}
             onChange={this.handleStandardTableChange}
           />
         </Card>
-        {/* <CreateForm {...parentMethods} modalVisible={modalVisible} />
+        <CreateForm {...parentMethods} modalVisible={modalVisible} />
         {stepFormValues && Object.keys(stepFormValues).length ? (
           <UpdateForm
             {...updateMethods}
             updateModalVisible={updateModalVisible}
             values={stepFormValues}
           />
-        ) : null} */}
+        ) : null}
       </div>
     );
   }
