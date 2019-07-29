@@ -373,11 +373,12 @@ class TableList extends Component<TableListProps, TableListState> {
       handleUpdate: this.handleUpdate,
     };
     return (
-      <div className={styles.tableListCls}>
-        <Card bordered={false} style={{ marginBottom: 20 }}>
-          <div className={styles.tableList}>
-            <div className={styles.tableListForm}>{this.renderAdvancedForm()}</div>
-            {/* <div className={styles.tableListOperator}>
+      <div>
+        <div className={styles.tableListCls}>
+          <Card bordered={false} style={{ marginBottom: 20 }}>
+            <div className={styles.tableList}>
+              <div className={styles.tableListForm}>{this.renderAdvancedForm()}</div>
+              {/* <div className={styles.tableListOperator}>
               <Button icon="plus" type="primary" onClick={() => this.handleModalVisible(true)}>
                 新建
               </Button>
@@ -392,8 +393,9 @@ class TableList extends Component<TableListProps, TableListState> {
                 </span>
               )}
             </div> */}
-          </div>
-        </Card>
+            </div>
+          </Card>
+        </div>
         <Card bordered={false}>
           <Table
             // selectedRows={selectedRows}
