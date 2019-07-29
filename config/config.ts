@@ -116,11 +116,16 @@ export default {
               name: 'operate',
               routes: [
                 {
-                  name: 'dot',
+                  name: 'dotname',
                   icon: 'book',
-                  path: '/operate/dot',
-                  // redirect: '/operate/dot',
-                  component: './form/basic-form',
+                  path: '/operate/dot/index',
+                  component: './operate/dot/index.tsx',
+                },
+                {
+                  name: 'listname',
+                  icon: 'book',
+                  path: '/operate/dot/list',
+                  component: './operate/dot/list.tsx',
                 },
               ],
             },

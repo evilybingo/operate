@@ -1,6 +1,7 @@
 export default {
   'menu.operate': '运营管理',
-  'menu.operate.dot': '网点统计',
+  'menu.operate.dotname': '网点统计',
+  'menu.operate.listname': 'kol统计',
   'menu.welcome': '欢迎',
   'menu.more-blocks': '更多区块',
   'menu.home': '首页',
