@@ -41,14 +41,14 @@ const menuDataRender = (menuList: MenuDataItem[]): MenuDataItem[] =>
   });
 
 const footerRender: BasicLayoutProps['footerRender'] = (_, defaultDom) => {
-  if (!isAntDesignPro()) {
-    return defaultDom;
-  }
+  // if (!isAntDesignPro()) {
+  //   return defaultDom;
+  // }
 
   return (
     <>
       {defaultDom}
-      <div
+      {/* <div
         style={{
           padding: '0px 24px 24px',
           textAlign: 'center',
@@ -61,7 +61,7 @@ const footerRender: BasicLayoutProps['footerRender'] = (_, defaultDom) => {
             alt="netlify logo"
           />
         </a>
-      </div>
+      </div> */}
     </>
   );
 };
