@@ -43,7 +43,7 @@ export interface DefaultSettings {
 }
 
 export default {
-  navTheme: 'dark',
+  navTheme: 'light',
   primaryColor: '#1890FF',
   layout: 'sidemenu',
   contentWidth: 'Fluid',
@@ -56,5 +56,5 @@ export default {
   },
   title: '运营后台',
   pwa: false,
-  iconfontUrl: '',
+  iconfontUrl: '',  
 } as DefaultSettings;
